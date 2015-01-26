@@ -1,5 +1,5 @@
 # PythonTeaching2014
-***Keep an eye on this repository as I will be adding files to it as the semester progresses.***
+This is my open repository for code and other materials used in various modules that I teach. Keep an eye on it as I will be adding files to it as the semester progresses.
 
 ## *PythonProgramming* directory
 Code examples and solutions to exercises for *CMPU2016 - Object Oriented Programming*, *CMPU1026 - Programming & Algorithms 1* and 
@@ -16,5 +16,4 @@ Code examples and solutions to exercises for *CMPU4055 - Web Mapping*.
 
 ## *ASDM* directory
 Scripts, SQL and other bits'n'pieces relevant to *SSPL9076 - Advanced Spatial Data Management*.
-
 
