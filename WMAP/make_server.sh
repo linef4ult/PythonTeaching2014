@@ -102,15 +102,15 @@ echo "** Make your first spatial database";
 echo "** Make a new databse user, connect and create database called 'firstspatial'";
 echo "**";
 sudo -u postgres createuser --superuser $USER
-createdb -U user firstspatial
+createdb -U $USER firstspatial
 
 echo "**";
 echo "** Add postgis and topology extensions";
 echo "**";
-psql -U user -d firstspatial -c "CREATE EXTENSION postgis;"
-psql -U user -d firstspatial -c "CREATE EXTENSION postgis_topology;"
+psql -U $USER -d firstspatial -c "CREATE EXTENSION postgis;"
+psql -U $USER -d firstspatial -c "CREATE EXTENSION postgis_topology;"
 
 echo "**";
 echo "** FINISHED";
-echo "** You should run 'psql -U user -d firstspatial' to set password for 'user' on PostgreSQL";
+echo "** You should run 'psql -U $USER -d firstspatial' to set password for 'user' on PostgreSQL";
 echo "**";
