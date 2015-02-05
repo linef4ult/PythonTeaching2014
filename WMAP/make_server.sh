@@ -18,8 +18,8 @@ echo "**";
 echo "** Update existing package repositories and packages";
 echo "**";
 
-apt-get update
-apt-get upgrade
+apt-get update -y
+apt-get upgrade -y
 
 echo "**";
 echo "** Packages needed";
@@ -99,7 +99,7 @@ service tomcat7 restart
 
 echo "**";
 echo "** Make your first spatial database";
-echo "** Make a new databse user, connect and create database called 'firstspatial'";
+echo "** Make a new databse user ($USER), connect and create database called 'firstspatial'";
 echo "**";
 sudo -u postgres createuser --superuser $USER
 createdb -U $USER firstspatial
