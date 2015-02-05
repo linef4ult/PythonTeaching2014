@@ -110,7 +110,12 @@ echo "**";
 psql -U $USER -d firstspatial -c "CREATE EXTENSION postgis;"
 psql -U $USER -d firstspatial -c "CREATE EXTENSION postgis_topology;"
 
+echo "**-----------------------------------------------------";
+echo "** You need to change the database password for $USER";
+echo "** Please enter this now.";
+echo "**-----------------------------------------------------";
+psql -U $USER -d firstspatial -c "\password"
+
 echo "**";
 echo "** FINISHED";
-echo "** You should run 'psql -U $USER -d firstspatial' to set password for 'user' on PostgreSQL";
 echo "**";
