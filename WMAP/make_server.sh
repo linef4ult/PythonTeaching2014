@@ -86,7 +86,7 @@ echo "** add line: host    all             all             0.0.0.0/0            
 ./replace_str.py -a /etc/postgresql/9.3/main/pg_hba.conf -n "host    all             all             0.0.0.0/0               md5"
 
 echo "** replace # listen_addresses = 'localhost' with listen_addresses = '*'";
-./replace_str.py -r /etc/postgresql/9.3/main/postgresql.conf -n "listen_addresses = '*'" -s "# listen_addresses = 'localhost'"
+./replace_str.py -r /etc/postgresql/9.3/main/postgresql.conf -n "listen_addresses = '*'" -s "#listen_addresses = 'localhost'"
 
 
 echo "**";
