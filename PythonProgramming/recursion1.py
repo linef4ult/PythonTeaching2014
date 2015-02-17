@@ -49,7 +49,14 @@ def factorial(n):
     print("After recursive call f(" + str(n) + ")", rest)
     return n * rest
 
+def fibonacci(n):
+    if n == 0 or n == 1:
+        return n
+    # print("{},".format(n), end=" ")
+    return fibonacci(n-1)+fibonacci(n-2)
 
-branch(100, 5)
+
+# branch(100, 5)
 # serpinski(200,6)
 # factorial(4)
+print("{}".format(fibonacci(6)))
