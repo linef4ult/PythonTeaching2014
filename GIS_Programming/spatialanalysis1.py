@@ -136,14 +136,14 @@ def create_merged_geom(shapefile, filter_key, filter_value):
     :return:
     """
 
-    # merged_shp = path.join(OUTPUT_DIR, "merged_geom.shp")
+    merged_shp = path.join(OUTPUT_DIR, "merged_geom.shp")
 
     try:
-        with fiona.open(shapefile, "r") as input:
+        with fiona.open(shapefile, "r", encoding="utf-8") as input:
             schema = input.schema.copy()
             output_schema = {'geometry': schema["geometry"], 'properties': {'name': 'str'}}
 
-            with fiona.open(merged_shp, "w", driver=input.driver, schema=output_schema, crs=input.crs) as output:
+            with fiona.open(merged_shp, "w", driver=input.driver, schema=output_schema, crs=input.crs, encoding=input.encoding) as output:
                 shapes = []
 
                 for feature in input:
