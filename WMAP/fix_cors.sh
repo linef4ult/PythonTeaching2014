@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
+echo "**";
+echo "** Tomcat: Add config info to enable CORS";
+echo "** Mark Foley, March 2015.";
+echo "**";
 
-echo "**";
-echo "** Tomcat";
-echo "** Add config info to enable CORS";
-echo "**";
+# Check that script run as root
+if ! [ $UID = 0 ]; then
+	echo "**";
+	echo "** This script should be run as root. Exiting now.";
+	echo "**";
+	exit 1;
+fi
 
 read -r -d '' CORS_STRING << EOM
 
