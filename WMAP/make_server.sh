@@ -94,6 +94,7 @@ echo "** Add config info to enable CORS";
 echo "**";
 
 read -r -d '' CORS_STRING << EOM
+
   <filter>
     <filter-name>CorsFilter</filter-name>
     <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
