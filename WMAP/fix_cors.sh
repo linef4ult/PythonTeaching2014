@@ -28,6 +28,8 @@ read -r -d '' CORS_STRING << EOM
     <filter-name>CorsFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+
+
 </web-app>
 EOM
 
