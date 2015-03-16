@@ -132,10 +132,11 @@ sudo -u postgres createuser --superuser $USER
 createdb -U $USER firstspatial
 
 echo "**";
-echo "** Add postgis and topology extensions";
+echo "** Add postgis, topology and hstore extensions";
 echo "**";
 psql -U $USER -d firstspatial -c "CREATE EXTENSION postgis;"
 psql -U $USER -d firstspatial -c "CREATE EXTENSION postgis_topology;"
+psql -U $USER -d firstspatial -c "CREATE EXTENSION hstore;"
 
 echo "**-----------------------------------------------------";
 echo "** You need to change the database password for $USER";
