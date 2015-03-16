@@ -109,7 +109,7 @@ read -r -d '' CORS_STRING << EOM
 </web-app>
 EOM
 
-./replace_str.py -r /etc/tomcat7/web.xml -s "</web-app>" -n $CORS_STRING;
+./replace_str.py -r /etc/tomcat7/web.xml -s "</web-app>" -n "$CORS_STRING";
 
 
 echo "**";
