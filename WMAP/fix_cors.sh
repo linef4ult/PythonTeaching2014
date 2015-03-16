@@ -14,6 +14,8 @@ fi
 
 read -r -d '' CORS_STRING << EOM
 
+<!-- Added filters to handle CORS requests - MF March 2015-->
+
   <filter>
     <filter-name>CorsFilter</filter-name>
     <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
