@@ -17,9 +17,14 @@ fi
 echo "**";
 echo "** Update existing package repositories and packages";
 echo "**";
-
 apt-get update -y
 apt-get upgrade -y
+
+echo "**";
+echo "** Add repository for pgRouting and update available packages list";
+echo "**";
+apt-add-repository ppa:georepublic/pgrouting -y
+apt-get update -y
 
 echo "**";
 echo "** Packages needed";
@@ -54,6 +59,14 @@ echo "**";
 echo "** phppgadmin - Web-bbased admin interface for PostgreSQL";
 echo "**";
 apt-get install phppgadmin -y
+
+
+echo "**";
+echo "** pgRouting and osm2pgrouting - Add routing capability to PostgreSQL and trabnslate OSM data to routable form";
+echo "**";
+apt-get install postgresql-9.3-pgrouting -y
+apt-get install osm2pgrouting -y
+
 
 echo "**";
 echo "** geoserver - get it, unzip it and copy war file to appropriate directory so that Tomcat can see it.";
@@ -137,6 +150,8 @@ echo "**";
 psql -U $USER -d firstspatial -c "CREATE EXTENSION postgis;"
 psql -U $USER -d firstspatial -c "CREATE EXTENSION postgis_topology;"
 psql -U $USER -d firstspatial -c "CREATE EXTENSION hstore;"
+psql -U $USER -d firstspatial -c "CREATE EXTENSION pgrouting;"
+
 
 echo "**-----------------------------------------------------";
 echo "** You need to change the database password for $USER";
