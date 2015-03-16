@@ -88,6 +88,11 @@ echo "** add line: host    all             all             0.0.0.0/0            
 echo "** replace # listen_addresses = 'localhost' with listen_addresses = '*'";
 ./replace_str.py -r /etc/postgresql/9.3/main/postgresql.conf -n "listen_addresses = '*'" -s "#listen_addresses = 'localhost'"
 
+echo "**";
+echo "** Tomcat";
+echo "** Add config info to enable CORS";
+corsStr = "  <filter>\n    <filter-name>CorsFilter</filter-name>\n    <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>\n    <init-param>\n      <param-name>cors.allowed.origins</param-name>\n      <param-value>*</param-value>\n    </init-param>\n</filter>\n<filter-mapping>\n    <filter-name>CorsFilter</filter-name>\n    <url-pattern>/*</url-pattern>\n</filter-mapping>\n\n</web-app>";
+./replace_str.py -r /etc/tomcat7/web.xml -n $corsStr -s "</web-app>"
 
 echo "**";
 echo "** Restart PostgreSQL, Apache and Tomcat so that these changes are activated";
