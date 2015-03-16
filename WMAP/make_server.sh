@@ -88,12 +88,13 @@ echo "** add line: host    all             all             0.0.0.0/0            
 echo "** replace # listen_addresses = 'localhost' with listen_addresses = '*'";
 ./replace_str.py -r /etc/postgresql/9.3/main/postgresql.conf -n "listen_addresses = '*'" -s "#listen_addresses = 'localhost'"
 
-echo "**";
 echo "** Tomcat";
 echo "** Add config info to enable CORS";
 echo "**";
 
 read -r -d '' CORS_STRING << EOM
+
+<!-- Added filters to handle CORS requests - MF March 2015-->
 
   <filter>
     <filter-name>CorsFilter</filter-name>
@@ -107,6 +108,8 @@ read -r -d '' CORS_STRING << EOM
     <filter-name>CorsFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+
+
 </web-app>
 EOM
 
