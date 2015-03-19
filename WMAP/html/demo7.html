@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<!--Tell the browser that the language of the page is English-->
+<head lang="en">
+
+    <!--Tell the browser that your page is encoded in utf-8, don't just let it guess-->
+    <meta charset="UTF-8">
+
+    <!--Make your page more mobile-friendly-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Web Mapping Wk 7 Demo</title>
+
+    <!--Include Leaflet CSS file in the head section of your document-->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+    <!--Include Leaflet JavaScript file-->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="../leaflet-providers.js" type="text/javascript"></script>
+
+    <!--Make sure the map container has a defined height, for example by setting it in CSS:-->
+    <style>
+        html, body, #map {height: 95%;}
+    </style>
+
+    <!--Include a JavaScriopt file which contains YOUR work. This must have a 'maim' function as the page body looks
+    for it at the 'onload' event-->
+    <script src="../js/basic_main.js" type="text/javascript"></script>
+
+</head>
+
+<!--When your page loads in the browser it fires an 'onload' event. This kicks off your JavaScript functionality-->
+<body onload="main()">
+
+    <!--Put a div element with a certain id where you want your map to be-->
+    <div id="map"></div>
+
+</body>
+
+</html>

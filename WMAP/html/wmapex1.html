@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='UTF-8' />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Web Mapping Example using Leaflet</title>
+    <!-- Include jQuery stuff
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>-->
+    <!--Include Leaflet CSS & JavaScript files in the head section of your document-->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"/>
+    <link rel="stylesheet" href="css/MarkerCluster.Default.css"/>
+    <link rel="stylesheet" href="../css/MarkerCluster.css"/>
+
+    <script src="../js/leaflet.js" type="text/javascript"></script>
+    <script src="../js/leaflet-providers.js" type="text/javascript"></script>
+    <script src="../js/leaflet-GPX.js" type="text/javascript"></script>
+
+    <!--<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js" type="text/javascript"></script>
+    <script src="https://raw.github.com/leaflet-extras/leaflet-providers/master/leaflet-providers.js" type="text/javascript"></script>
+    <script src="https://raw.github.com/shramov/leaflet-plugins/master/layer/vector/GPX.js" type="text/javascript"></script>
+    -->
+    <!-- Scripts downloaded and/or adapted from Leaflet plugins. Generally available on GitHub. -->
+    <script src="../js/spin.min.js" type="text/javascript"></script>
+    <script src="../js/leaflet.spin.js" type="text/javascript"></script>
+    <script src="../js/leaflet.ajax.min.js" type="text/javascript"></script>
+    <script src="../js/leaflet.markercluster.js" type="text/javascript"></script>
+
+    <style>
+        /*
+        Ensure that the map renders in HTML5.
+
+        Adding the HTML5 doctype puts the browser into standards mode, in which they attempt to follow the CSS specification as closely as possible.
+
+        The elements default to being only as big as the elements that they contain. The <div> with width and height 100% winds up being 100% of nothing, so the map has no size. Ensuring that all of the elements back up to the <html> element are 100% of their containers means that they will actually fill the display, rather than having no size.
+        */
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body, #map {
+            height: 100%;
+        }
+
+        /*html, head, body { width: 100%; height: 100% }*/
+        /* Make sure the map container has a defined height, for example by setting it in CSS */
+        /*#map { height: 95%; width=95% } */
+
+        .info {
+            padding: 6px 8px;
+            font: 14px/16px Arial, Helvetica, sans-serif;
+            background: white;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .info h4 {
+            margin: 0 0 5px;
+            color: #777;
+        }
+
+        .legend {
+            line-height: 18px;
+            color: #555;
+        }
+
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+
+        .myIcon {
+            background: white;
+            border-style: solid;
+            border-color: red;
+        }
+    </style>
+
+    <!--
+    These are your scripts. They're saved to separate files for convenience and coherence. You edit these to customise the map. This is the heart of your application. The creative bit happens here.
+    -->
+    <script src="../js/main.js" type="text/javascript"></script>
+</head>
+
+<body onload="main()">
+<!--Put a div element with a certain id where you want your map to be-->
+<div id="map"></div>
+</body>
+</html>
