@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map>
+
+<Map background-color="steelblue" srs="+init=epsg:29902">
+    <Style name="Style1">
+        <Rule>
+            <Filter>[countyname] = 'Kerry County'</Filter>
+            <LineSymbolizer stroke="gray" stroke-width="0.5"/>
+            <PolygonSymbolizer fill="#406040"/>
+        </Rule>
+        <Rule>
+            <ElseFilter/>
+            <LineSymbolizer stroke="gray" stroke-width="0.5"/>
+            <PolygonSymbolizer fill="#604060"/>
+        </Rule>
+    </Style>
+    <Style name="Style2">
+        <Rule>
+            <TextSymbolizer face-name="DejaVu Sans Book" size="10" fill="black" halo-fill= "white" halo-radius="1" >
+                [countyname]</TextSymbolizer>
+        </Rule>
+    </Style>
+
+    <Layer name="polygons">
+        <StyleName>Style1</StyleName>
+        <Datasource>
+            <Parameter name="type">shape</Parameter>
+            <Parameter name="file">data/ctygeom.shp</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="labels">
+        <StyleName>Style2</StyleName>
+        <Datasource>
+            <Parameter name="type">shape</Parameter>
+            <Parameter name="file">data/ctygeom.shp</Parameter>
+        </Datasource>
+    </Layer>
+</Map>

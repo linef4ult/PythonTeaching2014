@@ -37,6 +37,14 @@ class MyGUI:
         self.button2.configure(text="Off to join the circus!", background="Tan")
         self.button2.pack(side=LEFT)
 
+        self.my_container_2 = Toplevel(my_parent)
+        self.my_container_2.title("a separate t/level win")
+        self.my_container_3 = Frame(self.my_container_2)
+        self.my_container_3.pack()
+        self.lablel1 = Label(self.my_container_3)
+        self.lablel1["text"] = "some text in a label"
+        self.lablel1.pack()
+
 def main():
     # Contain top level window usually called root
     root = Tk()

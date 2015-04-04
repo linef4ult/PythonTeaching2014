@@ -1,0 +1,96 @@
+Notes
+-----
+This file contains a series of doctests which, if passed, should give a high degree of confidence that the tested
+module meets its requirements. Store your program and this file in the same directory.
+
+Remember that this test file is a good guide to the requirements, so the closer you get to a clean test result,
+the closer your program is likely to be to the requirements.
+
+
+>>> from rational_doctest import *
+>>> aa = Rational(1,2)
+in __init__ method
+>>> bb = Rational(5,10)
+in __init__ method
+>>> aa == bb
+in __eq__ method
+in reduce method
+In function gcd. Attempting to compute gcd for 1 and 2
+Initial fraction is 2/1
+1/0
+GCD is 1
+in __init__ method
+in reduce method
+In function gcd. Attempting to compute gcd for 5 and 10
+Initial fraction is 10/5
+5/0
+GCD is 5
+in __init__ method
+True
+>>> cc = Rational(2,3)
+in __init__ method
+>>> aa + bb
+in __add__ method
+In function lcm. Attempting to compute lcm for 2 and 10
+In function gcd. Attempting to compute gcd for 2 and 10
+Initial fraction is 10/2
+2/0
+GCD is 2
+LCM is 10
+In function gcd. Attempting to compute gcd for 2 and 10
+Initial fraction is 10/2
+2/0
+GCD is 2
+in __init__ method
+10/10
+>>> aa + 2
+in __add__ method
+in __init__ method
+In function lcm. Attempting to compute lcm for 2 and 1
+In function gcd. Attempting to compute gcd for 2 and 1
+Initial fraction is 2/1
+1/0
+GCD is 1
+LCM is 2
+In function gcd. Attempting to compute gcd for 2 and 1
+Initial fraction is 2/1
+1/0
+GCD is 1
+in __init__ method
+5/2
+>>> aa += cc
+in __iadd__ method
+in __add__ method
+In function lcm. Attempting to compute lcm for 2 and 3
+In function gcd. Attempting to compute gcd for 2 and 3
+Initial fraction is 3/2
+2/1
+1/0
+GCD is 1
+LCM is 6
+In function gcd. Attempting to compute gcd for 2 and 3
+Initial fraction is 3/2
+2/1
+1/0
+GCD is 1
+in __init__ method
+>>> gcd(0,1)
+In function gcd. Attempting to compute gcd for 0 and 1
+Error in function gcd: a must be positive integer > 0
+Initial fraction is 1/0
+GCD is 1
+1
+>>> lcm(4,6)
+In function lcm. Attempting to compute lcm for 4 and 6
+In function gcd. Attempting to compute gcd for 4 and 6
+Initial fraction is 6/4
+4/2
+2/0
+GCD is 2
+LCM is 12
+In function gcd. Attempting to compute gcd for 4 and 6
+Initial fraction is 6/4
+4/2
+2/0
+GCD is 2
+12
