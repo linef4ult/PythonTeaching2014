@@ -71,7 +71,7 @@ def f2():
 class P:
 
     def __init__(self,x):
-        self.x = x
+        self.__x = x
 
     def __str__(self):
         return "x={}".format(self.x)

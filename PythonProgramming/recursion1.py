@@ -23,6 +23,7 @@ def branch(length, level):
 def serpinski(length, depth):
     if depth > 1:
         t.dot()
+
     if depth == 0:
         t.stamp()
     else:
@@ -57,6 +58,6 @@ def fibonacci(n):
 
 
 # branch(100, 5)
-# serpinski(200,6)
+serpinski(200,6)
 # factorial(4)
-print("{}".format(fibonacci(6)))
+# print("{}".format(fibonacci(6)))

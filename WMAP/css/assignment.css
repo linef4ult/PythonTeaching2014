@@ -1,0 +1,43 @@
+/* my demo css file */
+
+html, body {
+    height: 98%;
+    /*width: 75%;*/
+}
+
+#map {
+    height: 85%;
+    /*width: 75%;*/
+}
+
+#currentLocation, #targetInfo, #distanceInfo {
+    background-color: rgba(0, 0, 0, 0.57);
+    color: #ffffff;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: x-small;
+    /*height: 13%;*/
+    position: relative;
+}
+
+#stats {
+    height: 5%;
+}
+
+#dirArrow {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    left: 5%;
+    top: 5%;
+    /*transform: translate(-50%, -50%);*/
+    /*-webkit-transform: translate(-50%, -50%);*/
+    /*-moz-transform: translate(-50%, -50%);*/
+    /*-ms-transform: translate(-50%, -50%);*/
+    display: inline-block;
+    /*background: red;*/
+
+    /*margin-right: -50%;*/
+    /*background: url("../images/arrow2.png") no-repeat;*/
+    vertical-align: middle;
+    /*align-items: center;*/
+}
